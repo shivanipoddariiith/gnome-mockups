@@ -5,20 +5,21 @@
                 #be forwarded or backwarded  
 	Background: Playback toolbar is being diplayed at the bottom
 		
-		Scenario: Fastforward the playback
+		Scenario: Play the next song
                 	When The song is playing
-                	And  Fastforward button is pressed
-                	Then The song should be fast forwarded
+                	And  Next-arrow button is pressed
+                	Then The next song should start playing
 
-		Scenario: Rewind the playback
+		Scenario: Play the previous song
                 	When The song is playing
-                	And  Rewind-backword button is pressed
-                	Then The song should be rewinded
+                	And  Previous-arrow button is pressed
+                	Then The last song should start playing
 
-		Scenario: Stop the playback
+		Scenario: Pause the playback
                 	When The song is playing
-                	And  The stop button is pressed.
-                	Then The song is stopped playing
+                	And  The pause button is pressed.
+                	Then The song playing is paused
+			And  The pause button is changed to a play button 
 		
 		Scenario: Start the playback for no song
                 	When No song is selected for playback
@@ -29,16 +30,19 @@
                 	When song has been paused
                 	And  The play button is pressed
                 	Then The song starts playing 
+			And  The play button changes to a pause button 
 		
+		#The context here will be described with respect to various views
+
 		Scenario: Play songs in shuffled order 
                 	When The Shuffle option is selected from the right hand side drop-down menu
-                	Then Shuffle the order of the songs in the current
-                        	playlist while sending them to the Playback songs
+                	Then Shuffle the order of the songs in the current context
+				while sending them to the Playback songs
 		
 		Scenario: Repeatedly play the selected playlist
                 	When The Repeat list option is selected from the right
                        		hand side drop-down menu
-                	Then Repeat the order of the songs in the current playlist
+                	Then Repeat the order of the songs in the current context
                         	while sending them to the Playback songs
 		
 		Scenario: Repeatedly play the selected song 
