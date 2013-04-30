@@ -21,10 +21,10 @@
                 	Then The song playing is paused
 			And  The pause button is changed to a play button 
 		
-		Scenario: Start the playback for no song
+		Scenario: Player for no song
                 	When No song is selected for playback
-                	And  The play button is pressed
-                	Then The button does not do anything
+			Then The playback toolbar is hidden
+                	
 		
 		Scenario: Start the playback for selected song
                 	When song has been paused
