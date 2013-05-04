@@ -6,18 +6,18 @@
 	Background: Playback toolbar is being diplayed at the bottom
 		
 		Scenario: Play the next song
-                	When The song is playing
-                	And  Next-arrow button is pressed
+                	Given The song is playing
+                	When  Next-arrow button is pressed
                 	Then The next song should start playing
 
 		Scenario: Play the previous song
-                	When The song is playing
-                	And  Previous-arrow button is pressed
+                	Given The song is playing
+                	When Previous-arrow button is pressed
                 	Then The last song should start playing
 
 		Scenario: Pause the playback
-                	When The song is playing
-                	And  The pause button is pressed.
+                	Given The song is playing
+                	When  The pause button is pressed.
                 	Then The song playing is paused
 			And  The pause button is changed to a play button 
 		
@@ -27,8 +27,8 @@
                 	
 		
 		Scenario: Start the playback for selected song
-                	When song has been paused
-                	And  The play button is pressed
+                	Given The song has been paused
+                	When  The play button is pressed
                 	Then The song starts playing 
 			And  The play button changes to a pause button 
 		
