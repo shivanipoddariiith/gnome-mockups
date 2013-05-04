@@ -4,6 +4,17 @@
                 #fast forward / backward, will its timestamps still
                 #be forwarded or backwarded  
 	Background: Playback toolbar is being diplayed at the bottom
+
+                #Not sure about so many Ands
+                Scenario: Elements being displayed by default in the Playbar
+                        Given The song is playing
+                        Then The next-song button is displayed
+                        And The previous-song button is displyed
+                        And The Play-Pause button is displayed
+                        And The progress bar is displayed
+                        And The timer is displayed
+                        And The Repeat-Shuffle combo-box is displayed
+                        
 		
 		Scenario: Play the next song
                 	Given The song is playing
