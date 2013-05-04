@@ -1,8 +1,6 @@
   Scenario: Controlling playing music
 
-                #If my song is paused and then I press 
-                #fast forward / backward, will its timestamps still
-                #be forwarded or backwarded  
+                
 	Background: Playback toolbar is being diplayed at the bottom
 
                 #Not sure about so many Ands
